@@ -1,0 +1,169 @@
+/* Reset and base styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('backgroundImg.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;     
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 2rem;
+    color: #e0e0e0;
+    position: relative; 
+    overflow: hidden; 
+}
+/* --- REMOVED: body::before (Orange Gradient) rule --- */
+
+
+/* Reusable container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #1a1e27; /* Slightly lighter dark container */
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+    z-index: 1; 
+    position: relative;
+}
+
+/* Headings */
+.container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+}
+
+/* Generic form layout */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+    margin-bottom: 1rem;
+}
+
+/* Dark themed input fields (login & register & add todo) */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.6rem 1rem;
+    border: 1px solid #3d455c; /* Muted border color */
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #1a1e27; /* Match container background */
+    color: #e0e0e0; 
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+input:focus {
+    border-color: #7986cb; /* Lighter blue on focus */
+    box-shadow: 0 0 8px rgba(121, 134, 203, 0.5);
+    background-color: #212531; /* Darken slightly on focus */
+}
+
+/* Placeholder text color */
+input::placeholder {
+    color: #9aa1b2; /* Lighter, clearer gray placeholder */
+}
+
+/* All buttons (Base style) - Keep the indigo theme for primary actions */
+button {
+    padding: 0.6rem 1rem;
+    background: #5c6bc0; /* Slightly softer indigo */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#addBtn{
+    background: #5cb85c;
+}
+
+/* Todo-specific styles */
+.todo-cards {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Space between todo cards */
+}
+
+.add-todo {
+    margin-top: 1rem; 
+}
+
+.todo-card {
+    background-color: #242933; /* Slightly darker than container */
+    padding: 0.75rem 1rem;
+    border: 1px solid #3d455c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Softer card shadow */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todo-card:hover {
+    transform: none; /* Removed the lift effect for a flatter, cleaner look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    background-color: #2a303c; /* Highlight on hover */
+}
+
+.todo-card span {
+    font-size: 1rem;
+    color: #e5e5e5;
+    display: flex; 
+    flex-grow: 1;
+    gap: 0.75rem;
+}
+
+/* Override button styles inside the card (e.g., the 'X' or 'Delete' button) */
+.todo-card button {
+    padding: 0.4rem 0.8rem;
+    width: auto;
+    margin: 0;
+    font-weight: bold;
+    border-radius: 5px; /* Slightly sharper corners for action buttons */
+}
+
+/* Add space between checkbox and text in todo-card */
+.todo-card input[type="checkbox"] {
+    margin-right: 0.75rem; /* space between checkbox and text */
+    transform: scale(1.2); /* optional: make checkbox slightly bigger */
+    cursor: pointer;
+}
+
+/* Link styling */
+.container p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.container p a {
+    color: #6366f1; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.container p a:hover {
+    color: #818cf8;
+    text-decoration: underline;
+}
