@@ -10,9 +10,9 @@ A full-stack Todo List platform with user authentication and personalized task m
 
 ## Tech Stack
 
-- **Backend:** Spring Boot 🌐  
-- **Frontend:** HTML, CSS, JavaScript 💻  
-- **Database:** PostgreSQL 🗄️
+- **Backend:** Spring Boot 
+- **Frontend:** HTML, CSS, JavaScript   
+- **Database:** PostgreSQL 
 
 ## Usage
 
